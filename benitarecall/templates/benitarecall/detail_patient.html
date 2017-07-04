@@ -1,0 +1,100 @@
+{% extends 'benitarecall/layout.html' %}
+
+
+{% block title %}Patient Detail | {{ block.super }}{% endblock %}
+
+{% block content %}
+<div style="background-color: #0D96FF !important" class="container-fluid">
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-xs-12">
+      <h1><b>Patient Detail</b></h1>
+      </div>
+    </div>
+  </div>
+  <br>
+</div>
+
+<br>
+
+<div class="container">
+<div class="row">
+<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Card Number</h3>
+  </div>
+  <div class="panel-body">
+    {{ patients.card_number }} 
+  </div>
+</div>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Name</h3>
+  </div>
+  <div class="panel-body">
+    {{ patients.patient_name }}
+  </div>
+</div>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Sex</h3>
+  </div>
+  <div class="panel-body">
+    {{ patients.sex }}
+  </div>
+</div>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Date of Birth</h3>
+  </div>
+  <div class="panel-body">
+    {{ patients.date_of_birth }}
+  </div>
+</div>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Phone Number</h3>
+  </div>
+  <div class="panel-body">
+    {{ patients.phone_number }}
+  </div>
+</div>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Email</h3>
+  </div>
+  <div class="panel-body">
+    {{ patients.email }}
+  </div>
+</div>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Address</h3>
+  </div>
+  <div class="panel-body">
+    {{ patients.address }}
+  </div>
+</div>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Occupation</h3>
+  </div>
+  <div class="panel-body">
+    {{ patients.occupation }}
+  </div>
+ </div>
+ <div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Health Management Organisation</h3>
+  </div>
+  <div class="panel-body">
+    {{ patients.hmo }}
+  </div>
+ </div>
+ </div>
+</div>
+</div>
+  
+{% endblock %}
