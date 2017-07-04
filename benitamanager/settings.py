@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'benitarecall',
     'bootstrapform',
-    'bootstrap3'
+    'bootstrap3',
 ]
 
 MIDDLEWARE = [
