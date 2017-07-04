@@ -17,7 +17,7 @@ class Patient(models.Model):
 	sex = models.CharField(max_length=7, choices=sex, blank=False)
 	date_of_birth = models.DateField(help_text="Please use the following format: <em>YYYY-MM-DD</em>", blank=True)
 	phone_number = models.CharField(max_length=30, blank=False)
-	email = models.EmailField(max_length=50, blank=True)
+	email = models.EmailField(max_length=100, blank=True)
 	address = models.CharField(max_length=100, blank=True)
 	occupation = models.CharField(max_length=50, blank=True)
 	hmo = models.CharField("HMO", max_length=100, help_text="Name of HMO(HMO ID Number)", blank=True)
@@ -57,8 +57,8 @@ class Schedule(models.Model):
 	def __str__(self):
 		return self.patient
 
-	#def get_absolute_url(self):
-		#return reverse('recall:detail_recall', kwargs={'pk': self.pk})
+	def get_absolute_url(self):
+		return reverse('benitarecall:detail_recall', kwargs={'pk': self.pk})
 
 	def clean(self):
 		date_of_recall = self.date_of_recall

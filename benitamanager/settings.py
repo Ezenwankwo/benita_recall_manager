@@ -120,10 +120,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),]
-
-LOGIN_REDIRECT_URL = '/benitarecall/add_patient/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
 
 # Heroku: Update database configuration from $DATABASE_URL.
 import dj_database_url
@@ -133,3 +131,5 @@ DATABASES['default'].update(db_from_env)
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+LOGIN_REDIRECT_URL = '/benitarecall/add_patient/'
