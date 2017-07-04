@@ -25,7 +25,7 @@ SECRET_KEY = 'pcq@vnmaa^4!4zsb4_pv6^)(xaz-gllnr%&$rwde%c=7#sj895'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['benitarecallmanager.herokuapp.com']
 
 
 # Application definition
@@ -121,9 +121,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-    '/var/www/static/',
-]
+    os.path.join(BASE_DIR, "static"),]
 
 LOGIN_REDIRECT_URL = '/benitarecall/add_patient/'
 
