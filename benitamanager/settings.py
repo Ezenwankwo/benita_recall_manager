@@ -25,7 +25,7 @@ SECRET_KEY = 'pcq@vnmaa^4!4zsb4_pv6^)(xaz-gllnr%&$rwde%c=7#sj895'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['benitarecallmanager.herokuapp.com']
+ALLOWED_HOSTS = ['benitarecallmanager.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -123,13 +123,14 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 
-# Heroku: Update database configuration from $DATABASE_URL.
-import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 LOGIN_REDIRECT_URL = '/benitarecall/add_patient/'
+
+# Update database configuration with $DATABASE_URL.
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
