@@ -25,7 +25,7 @@ SECRET_KEY = 'pcq@vnmaa^4!4zsb4_pv6^)(xaz-gllnr%&$rwde%c=7#sj895'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['benitarecallmanager.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
