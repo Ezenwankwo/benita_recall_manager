@@ -7,8 +7,8 @@ from django.core.exceptions import ValidationError
 
 # Create your models here.
 class Patient(models.Model):
-	card_number = models.CharField(unique=True, max_length=30, blank=False)
-	patient_name = models.CharField(max_length=50, help_text="Title Surname Firstname", blank=False)
+	card_number = models.CharField(unique=True, max_length=50, blank=False)
+	patient_name = models.CharField(max_length=100, help_text="Title Surname Firstname", blank=False)
 	sex = (
 		('Male', 'Male'),
 		('Female', 'Female'),
@@ -17,10 +17,10 @@ class Patient(models.Model):
 	sex = models.CharField(max_length=7, choices=sex, blank=False)
 	date_of_birth = models.DateField(help_text="Please use the following format: <em>YYYY-MM-DD</em>", blank=True)
 	phone_number = models.CharField(max_length=30, blank=False)
-	email = models.EmailField(max_length=100, blank=True)
-	address = models.CharField(max_length=100, blank=True)
-	occupation = models.CharField(max_length=50, blank=True)
-	hmo = models.CharField("HMO", max_length=100, help_text="Name of HMO(HMO ID Number)", blank=True)
+	email = models.CharField(max_length=100, blank=True)
+	address = models.CharField(max_length=200, blank=True)
+	occupation = models.CharField(max_length=100, blank=True)
+	hmo = models.CharField("HMO", max_length=200, help_text="Name of HMO(HMO ID Number)", blank=True)
 
 
 	class Meta:
@@ -34,7 +34,7 @@ class Patient(models.Model):
 
 
 class Schedule(models.Model):
-	patient = models.CharField("Patient Name", max_length=50, help_text="Surname  Firstname  Othername", blank=False)
+	patient = models.CharField("Patient Name", max_length=100, help_text="Surname  Firstname  Othername", blank=False)
 	date_of_visit = models.DateField(help_text="Please use the following format: <em>YYYY-MM-DD</em>", blank=False)
 	summary_of_visit = models.TextField(max_length=500, blank=True)
 	date_of_recall = models.DateField(help_text="Please use the following format: <em>YYYY-MM-DD</em>", blank=False)
