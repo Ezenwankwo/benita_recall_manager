@@ -15,7 +15,7 @@ class Patient(models.Model):
 	)
 
 	sex = models.CharField(max_length=7, choices=sex, blank=False)
-	date_of_birth = models.DateField(help_text="Please use the following format: <em>YYYY-MM-DD</em>", blank=True)
+	date_of_birth = models.DateField(help_text="Please use the following format: <em>YYYY-MM-DD</em>", null=True, blank=True)
 	phone_number = models.CharField(max_length=30, blank=False)
 	email = models.CharField(max_length=100, blank=True)
 	address = models.CharField(max_length=200, blank=True)
