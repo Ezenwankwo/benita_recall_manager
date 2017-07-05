@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'pcq@vnmaa^4!4zsb4_pv6^)(xaz-gllnr%&$rwde%c=7#sj895'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['benitarecallmanager.herokuapp.com']
 
